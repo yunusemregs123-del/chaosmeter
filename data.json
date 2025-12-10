@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-10T20:10:49.285071+00:00",
+  "lastUpdated": "2025-12-10T20:14:20.032847+00:00",
   "updateInterval": 300,
   "chaosFactors": {
     "defcon": {
@@ -12,15 +12,15 @@
       "max": 9
     },
     "vix": {
-      "value": 18.7,
+      "value": 28.9,
       "max": 80
     },
     "ransom": {
-      "value": 728,
+      "value": 702,
       "max": 1000
     },
     "ddos": {
-      "value": 10744,
+      "value": 11645,
       "max": 50000
     },
     "zeroday": {
@@ -28,321 +28,398 @@
       "max": 50
     },
     "botnet": {
-      "value": 3.4,
+      "value": 3.1,
       "max": 10
     },
     "phish": {
-      "value": 4785,
+      "value": 3253,
       "max": 10000
     },
     "darkweb": {
-      "value": 276,
+      "value": 372,
       "max": 500
     },
     "crypto": {
-      "value": 9.4,
+      "value": 8.4,
       "max": 20
     },
     "social": {
-      "value": 639,
+      "value": 516,
       "max": 2000
     },
     "supply": {
-      "value": 67,
+      "value": 61,
       "max": 100
     },
     "apt": {
-      "value": 33,
+      "value": 34,
       "max": 50
     },
     "iot": {
-      "value": 2.9,
+      "value": 5.2,
       "max": 10
     },
     "breach": {
-      "value": 200,
+      "value": 103,
       "max": 500
     },
     "malware": {
-      "value": 1075,
+      "value": 1651,
       "max": 5000
     },
     "insider": {
-      "value": 37,
+      "value": 49,
       "max": 100
     },
     "patch": {
-      "value": 36,
+      "value": 24,
       "max": 90
     },
     "cloud": {
-      "value": 71,
+      "value": 68,
       "max": 100
     },
     "ai": {
-      "value": 92,
+      "value": 89,
       "max": 500
     }
   },
   "attacks": [
     {
-      "from": "RU",
-      "to": "JP",
-      "type": "Exploit",
-      "intensity": 1,
-      "timestamp": "2025-12-10T20:10:54.272732+00:00"
-    },
-    {
       "from": "KP",
-      "to": "US",
-      "type": "SQLi",
+      "to": "GB",
+      "type": "Ransomware",
       "intensity": 4,
-      "timestamp": "2025-12-10T20:10:54.272765+00:00"
+      "timestamp": "2025-12-10T20:14:24.212724+00:00"
     },
     {
-      "from": "ID",
-      "to": "US",
+      "from": "EG",
+      "to": "JP",
+      "type": "Phishing",
+      "intensity": 4,
+      "timestamp": "2025-12-10T20:14:24.212787+00:00"
+    },
+    {
+      "from": "BR",
+      "to": "JP",
       "type": "DDoS",
-      "intensity": 1,
-      "timestamp": "2025-12-10T20:10:54.272783+00:00"
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.212826+00:00"
     },
     {
-      "from": "US",
-      "to": "GB",
-      "type": "DDoS",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:10:54.272800+00:00"
-    },
-    {
-      "from": "VN",
-      "to": "GB",
-      "type": "DDoS",
-      "intensity": 1,
-      "timestamp": "2025-12-10T20:10:54.272816+00:00"
-    },
-    {
-      "from": "VN",
-      "to": "GB",
-      "type": "Brute Force",
-      "intensity": 7,
-      "timestamp": "2025-12-10T20:10:54.272833+00:00"
-    },
-    {
-      "from": "US",
+      "from": "BR",
       "to": "AU",
       "type": "Ransomware",
       "intensity": 7,
-      "timestamp": "2025-12-10T20:10:54.272849+00:00"
+      "timestamp": "2025-12-10T20:14:24.212875+00:00"
+    },
+    {
+      "from": "TR",
+      "to": "TW",
+      "type": "Ransomware",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.212912+00:00"
+    },
+    {
+      "from": "VN",
+      "to": "TW",
+      "type": "Phishing",
+      "intensity": 7,
+      "timestamp": "2025-12-10T20:14:24.212947+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "CA",
+      "type": "Brute Force",
+      "intensity": 2,
+      "timestamp": "2025-12-10T20:14:24.212980+00:00"
+    },
+    {
+      "from": "IN",
+      "to": "US",
+      "type": "DDoS",
+      "intensity": 6,
+      "timestamp": "2025-12-10T20:14:24.213012+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "US",
+      "type": "Brute Force",
+      "intensity": 9,
+      "timestamp": "2025-12-10T20:14:24.213043+00:00"
+    },
+    {
+      "from": "US",
+      "to": "GB",
+      "type": "Botnet",
+      "intensity": 8,
+      "timestamp": "2025-12-10T20:14:24.213077+00:00"
     },
     {
       "from": "RU",
-      "to": "IL",
-      "type": "DDoS",
+      "to": "FR",
+      "type": "Botnet",
       "intensity": 7,
-      "timestamp": "2025-12-10T20:10:54.272866+00:00"
+      "timestamp": "2025-12-10T20:14:24.213111+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "IT",
+      "type": "Exploit",
+      "intensity": 10,
+      "timestamp": "2025-12-10T20:14:24.213148+00:00"
+    },
+    {
+      "from": "TH",
+      "to": "DE",
+      "type": "Brute Force",
+      "intensity": 10,
+      "timestamp": "2025-12-10T20:14:24.213185+00:00"
+    },
+    {
+      "from": "RU",
+      "to": "FR",
+      "type": "Brute Force",
+      "intensity": 6,
+      "timestamp": "2025-12-10T20:14:24.213220+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "IT",
+      "type": "Brute Force",
+      "intensity": 8,
+      "timestamp": "2025-12-10T20:14:24.213256+00:00"
+    },
+    {
+      "from": "KP",
+      "to": "NL",
+      "type": "SQLi",
+      "intensity": 4,
+      "timestamp": "2025-12-10T20:14:24.213292+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "ES",
+      "type": "DDoS",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213326+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "US",
+      "type": "Ransomware",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213358+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "US",
+      "type": "Phishing",
+      "intensity": 1,
+      "timestamp": "2025-12-10T20:14:24.213388+00:00"
+    },
+    {
+      "from": "VN",
+      "to": "CA",
+      "type": "Phishing",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213419+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "NL",
+      "type": "Phishing",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.213452+00:00"
+    },
+    {
+      "from": "US",
+      "to": "CH",
+      "type": "Botnet",
+      "intensity": 10,
+      "timestamp": "2025-12-10T20:14:24.213484+00:00"
+    },
+    {
+      "from": "IR",
+      "to": "US",
+      "type": "Ransomware",
+      "intensity": 6,
+      "timestamp": "2025-12-10T20:14:24.213522+00:00"
+    },
+    {
+      "from": "US",
+      "to": "AE",
+      "type": "Botnet",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213556+00:00"
+    },
+    {
+      "from": "RU",
+      "to": "FR",
+      "type": "Ransomware",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213599+00:00"
+    },
+    {
+      "from": "KP",
+      "to": "IL",
+      "type": "Botnet",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.213643+00:00"
+    },
+    {
+      "from": "RU",
+      "to": "TW",
+      "type": "Brute Force",
+      "intensity": 9,
+      "timestamp": "2025-12-10T20:14:24.213682+00:00"
+    },
+    {
+      "from": "RU",
+      "to": "US",
+      "type": "DDoS",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213712+00:00"
+    },
+    {
+      "from": "IN",
+      "to": "CH",
+      "type": "Botnet",
+      "intensity": 9,
+      "timestamp": "2025-12-10T20:14:24.213745+00:00"
+    },
+    {
+      "from": "IR",
+      "to": "CH",
+      "type": "Ransomware",
+      "intensity": 4,
+      "timestamp": "2025-12-10T20:14:24.213781+00:00"
+    },
+    {
+      "from": "TH",
+      "to": "US",
+      "type": "Phishing",
+      "intensity": 9,
+      "timestamp": "2025-12-10T20:14:24.213815+00:00"
     },
     {
       "from": "KP",
       "to": "US",
-      "type": "SQLi",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:10:54.272882+00:00"
+      "type": "Phishing",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.213848+00:00"
     },
     {
-      "from": "KP",
-      "to": "JP",
-      "type": "Botnet",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:10:54.272899+00:00"
+      "from": "RU",
+      "to": "US",
+      "type": "Phishing",
+      "intensity": 8,
+      "timestamp": "2025-12-10T20:14:24.213878+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "TW",
+      "type": "Ransomware",
+      "intensity": 3,
+      "timestamp": "2025-12-10T20:14:24.213914+00:00"
+    },
+    {
+      "from": "US",
+      "to": "BE",
+      "type": "Phishing",
+      "intensity": 8,
+      "timestamp": "2025-12-10T20:14:24.213950+00:00"
+    },
+    {
+      "from": "IN",
+      "to": "CA",
+      "type": "Phishing",
+      "intensity": 4,
+      "timestamp": "2025-12-10T20:14:24.213996+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "SE",
+      "type": "Ransomware",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.214034+00:00"
     },
     {
       "from": "CN",
       "to": "SG",
-      "type": "Ransomware",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:10:54.272915+00:00"
+      "type": "Botnet",
+      "intensity": 9,
+      "timestamp": "2025-12-10T20:14:24.214067+00:00"
     },
     {
-      "from": "IN",
+      "from": "CN",
       "to": "GB",
       "type": "Ransomware",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:10:54.272931+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "CA",
-      "type": "DDoS",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:10:54.272947+00:00"
-    },
-    {
-      "from": "EG",
-      "to": "DE",
-      "type": "Ransomware",
-      "intensity": 2,
-      "timestamp": "2025-12-10T20:10:54.272965+00:00"
-    },
-    {
-      "from": "MX",
-      "to": "CA",
-      "type": "DDoS",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:10:54.272982+00:00"
-    },
-    {
-      "from": "UA",
-      "to": "US",
-      "type": "Phishing",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:10:54.272999+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "CA",
-      "type": "Ransomware",
       "intensity": 3,
-      "timestamp": "2025-12-10T20:10:54.273015+00:00"
+      "timestamp": "2025-12-10T20:14:24.214099+00:00"
     },
     {
-      "from": "CN",
-      "to": "AU",
-      "type": "DDoS",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:10:54.273031+00:00"
+      "from": "KP",
+      "to": "DE",
+      "type": "Exploit",
+      "intensity": 4,
+      "timestamp": "2025-12-10T20:14:24.214208+00:00"
+    },
+    {
+      "from": "IR",
+      "to": "KR",
+      "type": "Botnet",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.214251+00:00"
     },
     {
       "from": "CN",
       "to": "CH",
       "type": "Ransomware",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:10:54.273048+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "US",
-      "type": "Exploit",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:10:54.273067+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "ES",
-      "type": "Phishing",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:10:54.273101+00:00"
-    },
-    {
-      "from": "VN",
-      "to": "KR",
-      "type": "Phishing",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:10:54.273134+00:00"
-    },
-    {
-      "from": "BR",
-      "to": "CA",
-      "type": "Botnet",
       "intensity": 1,
-      "timestamp": "2025-12-10T20:10:54.273170+00:00"
-    },
-    {
-      "from": "IR",
-      "to": "JP",
-      "type": "Phishing",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:10:54.273203+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "GB",
-      "type": "DDoS",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:10:54.273231+00:00"
-    },
-    {
-      "from": "BR",
-      "to": "US",
-      "type": "DDoS",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:10:54.273253+00:00"
-    },
-    {
-      "from": "KP",
-      "to": "DE",
-      "type": "DDoS",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:10:54.273269+00:00"
-    },
-    {
-      "from": "IR",
-      "to": "DE",
-      "type": "Phishing",
-      "intensity": 7,
-      "timestamp": "2025-12-10T20:10:54.273285+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "FR",
-      "type": "DDoS",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:10:54.273301+00:00"
+      "timestamp": "2025-12-10T20:14:24.214289+00:00"
     },
     {
       "from": "US",
-      "to": "AU",
-      "type": "DDoS",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:10:54.273317+00:00"
+      "to": "JP",
+      "type": "Exploit",
+      "intensity": 7,
+      "timestamp": "2025-12-10T20:14:24.214324+00:00"
     },
     {
       "from": "CN",
-      "to": "GB",
-      "type": "Ransomware",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:10:54.273332+00:00"
-    },
-    {
-      "from": "ID",
-      "to": "US",
-      "type": "DDoS",
-      "intensity": 2,
-      "timestamp": "2025-12-10T20:10:54.273348+00:00"
-    },
-    {
-      "from": "EG",
-      "to": "US",
-      "type": "DDoS",
-      "intensity": 2,
-      "timestamp": "2025-12-10T20:10:54.273365+00:00"
-    },
-    {
-      "from": "BR",
-      "to": "GB",
-      "type": "Brute Force",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:10:54.273381+00:00"
-    },
-    {
-      "from": "RU",
       "to": "KR",
       "type": "DDoS",
-      "intensity": 7,
-      "timestamp": "2025-12-10T20:10:54.273397+00:00"
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.214358+00:00"
     },
     {
-      "from": "RO",
-      "to": "GB",
-      "type": "DDoS",
+      "from": "IR",
+      "to": "KR",
+      "type": "Exploit",
       "intensity": 8,
-      "timestamp": "2025-12-10T20:10:54.273413+00:00"
+      "timestamp": "2025-12-10T20:14:24.214391+00:00"
     },
     {
-      "from": "RU",
-      "to": "GB",
-      "type": "Brute Force",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:10:54.273429+00:00"
+      "from": "CN",
+      "to": "SE",
+      "type": "Ransomware",
+      "intensity": 4,
+      "timestamp": "2025-12-10T20:14:24.214426+00:00"
+    },
+    {
+      "from": "IN",
+      "to": "FR",
+      "type": "Exploit",
+      "intensity": 1,
+      "timestamp": "2025-12-10T20:14:24.214461+00:00"
+    },
+    {
+      "from": "CN",
+      "to": "US",
+      "type": "Botnet",
+      "intensity": 5,
+      "timestamp": "2025-12-10T20:14:24.214493+00:00"
     }
   ],
   "headlines": [
@@ -355,110 +432,110 @@
   "logs": [
     {
       "type": "warn",
-      "message": "Rate limit approaching - 76%",
-      "timestamp": "2025-12-10T20:10:56.359459+00:00"
+      "message": "Suspicious traffic detected from 25.178.120.248",
+      "timestamp": "2025-12-10T20:14:27.161403+00:00"
     },
     {
       "type": "warn",
-      "message": "Rate limit approaching - 76%",
-      "timestamp": "2025-12-10T20:10:56.359500+00:00"
+      "message": "Suspicious traffic detected from 184.43.227.41",
+      "timestamp": "2025-12-10T20:14:27.161478+00:00"
     },
     {
-      "type": "info",
-      "message": "Scanning port 3389 - Closed",
-      "timestamp": "2025-12-10T20:10:56.359526+00:00"
+      "type": "warn",
+      "message": "Suspicious traffic detected from 232.41.158.17",
+      "timestamp": "2025-12-10T20:14:27.161531+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Malware signature match - 0x43EA5",
+      "timestamp": "2025-12-10T20:14:27.161580+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Malware signature match - 0xC3801",
+      "timestamp": "2025-12-10T20:14:27.161630+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Malware signature match - 0x430D7",
+      "timestamp": "2025-12-10T20:14:27.161678+00:00"
     },
     {
       "type": "info",
       "message": "Scanning port 8080 - Open",
-      "timestamp": "2025-12-10T20:10:56.359551+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Rate limit approaching - 90%",
-      "timestamp": "2025-12-10T20:10:56.359574+00:00"
-    },
-    {
-      "type": "success",
-      "message": "Firewall rule applied - Block 191.17.8.13",
-      "timestamp": "2025-12-10T20:10:56.359598+00:00"
+      "timestamp": "2025-12-10T20:14:27.161727+00:00"
     },
     {
       "type": "info",
       "message": "API heartbeat - NVD responding",
-      "timestamp": "2025-12-10T20:10:56.359621+00:00"
+      "timestamp": "2025-12-10T20:14:27.161775+00:00"
     },
     {
-      "type": "info",
-      "message": "Scanning port 8080 - Open",
-      "timestamp": "2025-12-10T20:10:56.359645+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Suspicious traffic detected from 48.71.25.213",
-      "timestamp": "2025-12-10T20:10:56.359668+00:00"
+      "type": "error",
+      "message": "Malware signature match - 0x5CA4D",
+      "timestamp": "2025-12-10T20:14:27.161823+00:00"
     },
     {
       "type": "success",
-      "message": "Threat signature updated - 110 new patterns",
-      "timestamp": "2025-12-10T20:10:56.359692+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Suspicious traffic detected from 32.2.201.23",
-      "timestamp": "2025-12-10T20:10:56.359715+00:00"
+      "message": "Threat signature updated - 54 new patterns",
+      "timestamp": "2025-12-10T20:14:27.161871+00:00"
     },
     {
       "type": "info",
-      "message": "Scanning port 80 - Filtered",
-      "timestamp": "2025-12-10T20:10:56.359739+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Anomaly detected in sector B2",
-      "timestamp": "2025-12-10T20:10:56.359761+00:00"
+      "message": "API heartbeat - NVD responding",
+      "timestamp": "2025-12-10T20:14:27.161917+00:00"
     },
     {
       "type": "info",
-      "message": "Scanning port 22 - Closed",
-      "timestamp": "2025-12-10T20:10:56.359785+00:00"
+      "message": "API heartbeat - CISA responding",
+      "timestamp": "2025-12-10T20:14:27.161969+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Failed login attempt - User: user_8414",
+      "timestamp": "2025-12-10T20:14:27.162017+00:00"
+    },
+    {
+      "type": "success",
+      "message": "Firewall rule applied - Block 175.128.161.189",
+      "timestamp": "2025-12-10T20:14:27.162064+00:00"
     },
     {
       "type": "warn",
-      "message": "Suspicious traffic detected from 60.187.56.241",
-      "timestamp": "2025-12-10T20:10:56.359808+00:00"
-    },
-    {
-      "type": "error",
-      "message": "Failed login attempt - User: user_4365",
-      "timestamp": "2025-12-10T20:10:56.359831+00:00"
+      "message": "Rate limit approaching - 79%",
+      "timestamp": "2025-12-10T20:14:27.162111+00:00"
     },
     {
       "type": "warn",
-      "message": "Suspicious traffic detected from 45.107.73.39",
-      "timestamp": "2025-12-10T20:10:56.359854+00:00"
+      "message": "Anomaly detected in sector E5",
+      "timestamp": "2025-12-10T20:14:27.162158+00:00"
+    },
+    {
+      "type": "info",
+      "message": "API heartbeat - NVD responding",
+      "timestamp": "2025-12-10T20:14:27.162206+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Suspicious traffic detected from 253.32.119.66",
+      "timestamp": "2025-12-10T20:14:27.162253+00:00"
+    },
+    {
+      "type": "info",
+      "message": "Scanning port 8080 - Closed",
+      "timestamp": "2025-12-10T20:14:27.162304+00:00"
     },
     {
       "type": "error",
-      "message": "Brute force attempt blocked - VN",
-      "timestamp": "2025-12-10T20:10:56.359877+00:00"
-    },
-    {
-      "type": "error",
-      "message": "Brute force attempt blocked - RU",
-      "timestamp": "2025-12-10T20:10:56.359899+00:00"
-    },
-    {
-      "type": "error",
-      "message": "Brute force attempt blocked - IR",
-      "timestamp": "2025-12-10T20:10:56.359922+00:00"
+      "message": "Brute force attempt blocked - CN",
+      "timestamp": "2025-12-10T20:14:27.162352+00:00"
     }
   ],
   "stats": {
-    "totalThreats": 64136,
-    "blockedAttacks": 37689,
-    "activeBotnets": 147,
-    "compromisedIPs": 1642567
+    "totalThreats": 77944,
+    "blockedAttacks": 46760,
+    "activeBotnets": 301,
+    "compromisedIPs": 2910603
   },
-  "chaosIndex": 35.9
+  "chaosIndex": 36.5
 }
