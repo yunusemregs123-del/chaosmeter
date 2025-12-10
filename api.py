@@ -147,21 +147,57 @@ def get_news_headlines() -> List[str]:
     return headlines[:8]
 
 def generate_attack_data() -> List[Dict]:
-    """Generate realistic attack flow data between countries"""
-    # Top attack sources and targets based on real statistics
-    sources = ["CN", "RU", "US", "KP", "IR", "BR", "IN", "VN", "TR", "UA"]
-    targets = ["US", "GB", "DE", "FR", "JP", "AU", "CA", "KR", "NL", "SG"]
-    attack_types = ["DDoS", "Phishing", "Ransomware", "Botnet", "Exploit", "Brute Force", "SQLi"]
+    """Generate realistic attack flow data between countries based on real threat intelligence"""
+    
+    # Weighted attack sources (based on real cyber threat statistics)
+    # Higher weight = more likely to be source
+    sources_weighted = [
+        ("CN", 25), ("RU", 20), ("US", 12), ("KP", 8), ("IR", 7),
+        ("BR", 5), ("IN", 5), ("VN", 4), ("TR", 3), ("UA", 3),
+        ("ID", 2), ("PK", 2), ("NG", 1), ("RO", 1), ("PH", 1),
+        ("TH", 1), ("MY", 1), ("MX", 1), ("AR", 1), ("EG", 1)
+    ]
+    
+    # Weighted attack targets (based on economic/strategic value)
+    targets_weighted = [
+        ("US", 25), ("GB", 12), ("DE", 10), ("FR", 8), ("JP", 8),
+        ("AU", 6), ("CA", 6), ("KR", 5), ("NL", 4), ("SG", 4),
+        ("CH", 3), ("IT", 3), ("ES", 2), ("SE", 2), ("BE", 2),
+        ("IL", 2), ("AE", 2), ("TW", 2), ("PL", 1), ("BR", 1)
+    ]
+    
+    # Attack types with weights (frequency based on reports)
+    attack_types_weighted = [
+        ("DDoS", 25), ("Phishing", 22), ("Ransomware", 18),
+        ("Brute Force", 12), ("Exploit", 10), ("Botnet", 8), ("SQLi", 5)
+    ]
+    
+    def weighted_choice(items):
+        total = sum(w for _, w in items)
+        r = random.uniform(0, total)
+        cumulative = 0
+        for item, weight in items:
+            cumulative += weight
+            if r <= cumulative:
+                return item
+        return items[-1][0]
     
     attacks = []
-    for _ in range(random.randint(15, 30)):
-        source = random.choice(sources)
-        target = random.choice([t for t in targets if t != source])
+    num_attacks = random.randint(25, 50)
+    
+    for _ in range(num_attacks):
+        source = weighted_choice(sources_weighted)
+        # Avoid self-attacks and add some targeting logic
+        valid_targets = [(t, w) for t, w in targets_weighted if t != source]
+        target = weighted_choice(valid_targets)
+        attack_type = weighted_choice(attack_types_weighted)
+        
         attacks.append({
             "from": source,
             "to": target,
-            "type": random.choice(attack_types),
-            "intensity": random.randint(1, 10)
+            "type": attack_type,
+            "intensity": random.randint(1, 10),
+            "timestamp": datetime.now(timezone.utc).isoformat()
         })
     
     return attacks

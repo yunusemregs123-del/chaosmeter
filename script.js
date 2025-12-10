@@ -11,15 +11,23 @@ let simulationValues = {};
 let realTimeIntervals = [];
 let attackIndex = 0;
 
-// Country coordinates for attack animations
+// Country coordinates for attack animations (expanded)
 const countryCoords = {
-    'US': { x: 20, y: 38 }, 'GB': { x: 47, y: 28 }, 'DE': { x: 50, y: 28 },
-    'FR': { x: 48, y: 32 }, 'JP': { x: 85, y: 35 }, 'AU': { x: 88, y: 72 },
-    'CA': { x: 18, y: 30 }, 'KR': { x: 82, y: 37 }, 'NL': { x: 49, y: 27 },
-    'SG': { x: 77, y: 55 }, 'CN': { x: 78, y: 35 }, 'RU': { x: 65, y: 25 },
+    // Major attack sources
+    'CN': { x: 78, y: 35 }, 'RU': { x: 65, y: 25 }, 'US': { x: 20, y: 38 },
     'KP': { x: 81, y: 34 }, 'IR': { x: 60, y: 40 }, 'BR': { x: 30, y: 62 },
     'IN': { x: 70, y: 45 }, 'VN': { x: 77, y: 48 }, 'TR': { x: 55, y: 36 },
-    'UA': { x: 55, y: 28 }
+    'UA': { x: 55, y: 28 }, 'ID': { x: 80, y: 58 }, 'PK': { x: 67, y: 42 },
+    'NG': { x: 48, y: 52 }, 'RO': { x: 53, y: 32 }, 'PH': { x: 82, y: 50 },
+    'TH': { x: 75, y: 48 }, 'MY': { x: 76, y: 54 }, 'MX': { x: 15, y: 45 },
+    'AR': { x: 28, y: 75 }, 'EG': { x: 54, y: 43 },
+    // Major targets
+    'GB': { x: 47, y: 28 }, 'DE': { x: 50, y: 28 }, 'FR': { x: 48, y: 32 },
+    'JP': { x: 85, y: 35 }, 'AU': { x: 88, y: 72 }, 'CA': { x: 18, y: 30 },
+    'KR': { x: 82, y: 37 }, 'NL': { x: 49, y: 27 }, 'SG': { x: 77, y: 55 },
+    'CH': { x: 49, y: 30 }, 'IT': { x: 51, y: 33 }, 'ES': { x: 45, y: 35 },
+    'SE': { x: 52, y: 22 }, 'BE': { x: 48, y: 28 }, 'IL': { x: 57, y: 40 },
+    'AE': { x: 62, y: 44 }, 'TW': { x: 82, y: 44 }, 'PL': { x: 52, y: 28 }
 };
 
 // Factor metadata (icons, weights, units, descriptions)
