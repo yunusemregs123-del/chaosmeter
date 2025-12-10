@@ -30,28 +30,15 @@ const countryCoords = {
     'AE': { x: 62, y: 44 }, 'TW': { x: 82, y: 44 }, 'PL': { x: 52, y: 28 }
 };
 
-// Factor metadata (icons, weights, units, descriptions)
+// Factor metadata - matches 100% REAL data from api.py
 const factorMeta = {
-    defcon: { name: 'DEFCON', icon: '🚨', weight: 15, unit: '', desc: 'Nuclear defense readiness level' },
-    solar: { name: 'Solar', icon: '☀️', weight: 10, unit: 'Kp', desc: 'Geomagnetic storm activity' },
-    vix: { name: 'VIX', icon: '📊', weight: 8, unit: '', desc: 'Market volatility index' },
-    ransom: { name: 'Ransomware', icon: '💀', weight: 8, unit: '', desc: 'Active ransomware infections' },
-    ddos: { name: 'DDoS', icon: '🌊', weight: 7, unit: '', desc: 'DDoS attack volume in Gbps' },
-    zeroday: { name: 'Zero-Day', icon: '🎯', weight: 7, unit: '', desc: 'Unpatched critical vulnerabilities' },
-    botnet: { name: 'Botnet', icon: '🤖', weight: 6, unit: 'M', desc: 'Compromised devices in botnets' },
-    phish: { name: 'Phishing', icon: '🎣', weight: 5, unit: '', desc: 'Phishing campaigns detected' },
-    darkweb: { name: 'Dark Web', icon: '🕳️', weight: 5, unit: 'TB', desc: 'Stolen data on dark markets' },
-    crypto: { name: 'Crypto', icon: '₿', weight: 4, unit: '%', desc: 'Cryptocurrency volatility' },
-    social: { name: 'Social Eng', icon: '🎭', weight: 4, unit: '', desc: 'Social engineering attacks' },
-    supply: { name: 'Supply Chain', icon: '📦', weight: 4, unit: '%', desc: 'Supply chain risk index' },
-    apt: { name: 'APT', icon: '👤', weight: 3, unit: '', desc: 'APT group activity level' },
-    iot: { name: 'IoT', icon: '📡', weight: 3, unit: 'M', desc: 'Compromised IoT devices' },
-    breach: { name: 'Breaches', icon: '🔓', weight: 3, unit: '', desc: 'Daily data breaches' },
-    malware: { name: 'Malware', icon: '🦠', weight: 2, unit: '', desc: 'New malware signatures/hour' },
-    insider: { name: 'Insider', icon: '🕵️', weight: 2, unit: '%', desc: 'Internal data leak risk' },
-    patch: { name: 'Patch', icon: '⏰', weight: 2, unit: 'd', desc: 'Avg days to patch vulns' },
-    cloud: { name: 'Cloud', icon: '☁️', weight: 2, unit: '%', desc: 'Cloud security incidents' },
-    ai: { name: 'AI Attacks', icon: '🧠', weight: 2, unit: '', desc: 'Adversarial AI attacks' }
+    solar: { name: 'Solar Storm', icon: '☀️', weight: 15, unit: 'Kp', desc: 'Geomagnetic storm activity (NOAA)' },
+    zeroday: { name: 'Zero-Day', icon: '🎯', weight: 15, unit: '', desc: 'Critical vulnerabilities (NVD)' },
+    malware: { name: 'Malware', icon: '🦠', weight: 15, unit: '', desc: 'Active malware URLs (URLhaus)' },
+    botnet: { name: 'Botnet', icon: '🤖', weight: 15, unit: 'K', desc: 'Botnet C2 IPs (FeodoTracker)' },
+    ransom: { name: 'Ransomware', icon: '💀', weight: 20, unit: '', desc: 'Ransomware victims (RansomWatch)' },
+    crypto: { name: 'Crypto Vol', icon: '₿', weight: 10, unit: '%', desc: 'Market volatility (CoinGecko)' },
+    fear: { name: 'Fear Index', icon: '😨', weight: 10, unit: '', desc: 'Crypto fear & greed (Alternative.me)' }
 };
 
 // ============================================

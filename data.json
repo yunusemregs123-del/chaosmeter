@@ -1,425 +1,116 @@
 {
-  "lastUpdated": "2025-12-10T20:14:20.032847+00:00",
+  "lastUpdated": "2025-12-10T20:25:49.209249+00:00",
   "updateInterval": 300,
+  "chaosIndex": 52.3,
+  "dataQuality": "100% REAL",
   "chaosFactors": {
-    "defcon": {
-      "value": 4,
-      "max": 5,
-      "reverse": true
-    },
     "solar": {
       "value": 2.0,
-      "max": 9
-    },
-    "vix": {
-      "value": 28.9,
-      "max": 80
-    },
-    "ransom": {
-      "value": 702,
-      "max": 1000
-    },
-    "ddos": {
-      "value": 11645,
-      "max": 50000
+      "max": 9,
+      "source": "NOAA",
+      "real": true
     },
     "zeroday": {
-      "value": 10,
-      "max": 50
-    },
-    "botnet": {
-      "value": 3.1,
-      "max": 10
-    },
-    "phish": {
-      "value": 3253,
-      "max": 10000
-    },
-    "darkweb": {
-      "value": 372,
-      "max": 500
-    },
-    "crypto": {
-      "value": 8.4,
-      "max": 20
-    },
-    "social": {
-      "value": 516,
-      "max": 2000
-    },
-    "supply": {
-      "value": 61,
-      "max": 100
-    },
-    "apt": {
-      "value": 34,
-      "max": 50
-    },
-    "iot": {
-      "value": 5.2,
-      "max": 10
-    },
-    "breach": {
-      "value": 103,
-      "max": 500
+      "value": 8,
+      "max": 20,
+      "source": "NVD",
+      "real": true
     },
     "malware": {
-      "value": 1651,
-      "max": 5000
+      "value": 500,
+      "max": 500,
+      "source": "URLhaus",
+      "real": true
     },
-    "insider": {
-      "value": 49,
-      "max": 100
+    "botnet": {
+      "value": 0.01,
+      "max": 10,
+      "unit": "K",
+      "source": "FeodoTracker",
+      "real": true
     },
-    "patch": {
-      "value": 24,
-      "max": 90
+    "ransom": {
+      "value": 500,
+      "max": 500,
+      "source": "RansomWatch",
+      "real": true
     },
-    "cloud": {
-      "value": 68,
-      "max": 100
+    "crypto": {
+      "value": 1.1,
+      "max": 20,
+      "unit": "%",
+      "source": "CoinGecko",
+      "real": true
     },
-    "ai": {
-      "value": 89,
-      "max": 500
+    "fear": {
+      "value": 74,
+      "max": 100,
+      "source": "Alternative.me",
+      "classification": "Fear",
+      "real": true
     }
   },
   "attacks": [
     {
       "from": "KP",
-      "to": "GB",
+      "to": "JP",
+      "type": "Malware",
+      "intensity": 9,
+      "source": "URLhaus"
+    },
+    {
+      "from": "IN",
+      "to": "DE",
+      "type": "Malware",
+      "intensity": 9,
+      "source": "URLhaus"
+    },
+    {
+      "from": "CN",
+      "to": "US",
+      "type": "Malware",
+      "intensity": 8,
+      "source": "URLhaus"
+    },
+    {
+      "from": "IR",
+      "to": "SG",
       "type": "Ransomware",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.212724+00:00"
+      "group": "xinglocker",
+      "intensity": 7,
+      "source": "RansomWatch"
     },
     {
-      "from": "EG",
-      "to": "JP",
-      "type": "Phishing",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.212787+00:00"
-    },
-    {
-      "from": "BR",
-      "to": "JP",
-      "type": "DDoS",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.212826+00:00"
-    },
-    {
-      "from": "BR",
+      "from": "IR",
       "to": "AU",
       "type": "Ransomware",
+      "group": "avoslocker",
       "intensity": 7,
-      "timestamp": "2025-12-10T20:14:24.212875+00:00"
-    },
-    {
-      "from": "TR",
-      "to": "TW",
-      "type": "Ransomware",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.212912+00:00"
-    },
-    {
-      "from": "VN",
-      "to": "TW",
-      "type": "Phishing",
-      "intensity": 7,
-      "timestamp": "2025-12-10T20:14:24.212947+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "CA",
-      "type": "Brute Force",
-      "intensity": 2,
-      "timestamp": "2025-12-10T20:14:24.212980+00:00"
-    },
-    {
-      "from": "IN",
-      "to": "US",
-      "type": "DDoS",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:14:24.213012+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "US",
-      "type": "Brute Force",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:14:24.213043+00:00"
-    },
-    {
-      "from": "US",
-      "to": "GB",
-      "type": "Botnet",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:14:24.213077+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "FR",
-      "type": "Botnet",
-      "intensity": 7,
-      "timestamp": "2025-12-10T20:14:24.213111+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "IT",
-      "type": "Exploit",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:14:24.213148+00:00"
-    },
-    {
-      "from": "TH",
-      "to": "DE",
-      "type": "Brute Force",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:14:24.213185+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "FR",
-      "type": "Brute Force",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:14:24.213220+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "IT",
-      "type": "Brute Force",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:14:24.213256+00:00"
-    },
-    {
-      "from": "KP",
-      "to": "NL",
-      "type": "SQLi",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.213292+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "ES",
-      "type": "DDoS",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213326+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "US",
-      "type": "Ransomware",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213358+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "US",
-      "type": "Phishing",
-      "intensity": 1,
-      "timestamp": "2025-12-10T20:14:24.213388+00:00"
-    },
-    {
-      "from": "VN",
-      "to": "CA",
-      "type": "Phishing",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213419+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "NL",
-      "type": "Phishing",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.213452+00:00"
-    },
-    {
-      "from": "US",
-      "to": "CH",
-      "type": "Botnet",
-      "intensity": 10,
-      "timestamp": "2025-12-10T20:14:24.213484+00:00"
+      "source": "RansomWatch"
     },
     {
       "from": "IR",
-      "to": "US",
-      "type": "Ransomware",
-      "intensity": 6,
-      "timestamp": "2025-12-10T20:14:24.213522+00:00"
-    },
-    {
-      "from": "US",
-      "to": "AE",
-      "type": "Botnet",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213556+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "FR",
-      "type": "Ransomware",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213599+00:00"
-    },
-    {
-      "from": "KP",
-      "to": "IL",
-      "type": "Botnet",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.213643+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "TW",
-      "type": "Brute Force",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:14:24.213682+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "US",
-      "type": "DDoS",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213712+00:00"
-    },
-    {
-      "from": "IN",
-      "to": "CH",
-      "type": "Botnet",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:14:24.213745+00:00"
-    },
-    {
-      "from": "IR",
-      "to": "CH",
-      "type": "Ransomware",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.213781+00:00"
-    },
-    {
-      "from": "TH",
-      "to": "US",
-      "type": "Phishing",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:14:24.213815+00:00"
-    },
-    {
-      "from": "KP",
-      "to": "US",
-      "type": "Phishing",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.213848+00:00"
-    },
-    {
-      "from": "RU",
-      "to": "US",
-      "type": "Phishing",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:14:24.213878+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "TW",
-      "type": "Ransomware",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.213914+00:00"
-    },
-    {
-      "from": "US",
-      "to": "BE",
-      "type": "Phishing",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:14:24.213950+00:00"
-    },
-    {
-      "from": "IN",
-      "to": "CA",
-      "type": "Phishing",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.213996+00:00"
-    },
-    {
-      "from": "CN",
       "to": "SE",
       "type": "Ransomware",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.214034+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "SG",
-      "type": "Botnet",
-      "intensity": 9,
-      "timestamp": "2025-12-10T20:14:24.214067+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "GB",
-      "type": "Ransomware",
-      "intensity": 3,
-      "timestamp": "2025-12-10T20:14:24.214099+00:00"
+      "group": "lockbit2",
+      "intensity": 8,
+      "source": "RansomWatch"
     },
     {
       "from": "KP",
-      "to": "DE",
-      "type": "Exploit",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.214208+00:00"
-    },
-    {
-      "from": "IR",
       "to": "KR",
-      "type": "Botnet",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.214251+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "CH",
       "type": "Ransomware",
-      "intensity": 1,
-      "timestamp": "2025-12-10T20:14:24.214289+00:00"
-    },
-    {
-      "from": "US",
-      "to": "JP",
-      "type": "Exploit",
-      "intensity": 7,
-      "timestamp": "2025-12-10T20:14:24.214324+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "KR",
-      "type": "DDoS",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.214358+00:00"
+      "group": "arvinclub",
+      "intensity": 10,
+      "source": "RansomWatch"
     },
     {
       "from": "IR",
-      "to": "KR",
-      "type": "Exploit",
-      "intensity": 8,
-      "timestamp": "2025-12-10T20:14:24.214391+00:00"
-    },
-    {
-      "from": "CN",
       "to": "SE",
       "type": "Ransomware",
-      "intensity": 4,
-      "timestamp": "2025-12-10T20:14:24.214426+00:00"
-    },
-    {
-      "from": "IN",
-      "to": "FR",
-      "type": "Exploit",
-      "intensity": 1,
-      "timestamp": "2025-12-10T20:14:24.214461+00:00"
-    },
-    {
-      "from": "CN",
-      "to": "US",
-      "type": "Botnet",
-      "intensity": 5,
-      "timestamp": "2025-12-10T20:14:24.214493+00:00"
+      "group": "lorenz",
+      "intensity": 7,
+      "source": "RansomWatch"
     }
   ],
   "headlines": [
@@ -429,113 +120,144 @@
     "🚨 Warning: WinRAR Vulnerability CVE-2025-6218 Under Active Attack by Multiple Threat Groups",
     "🚨 Microsoft Issues Security Fixes for 56 Flaws, Including Active Exploit and Two Zero-Days"
   ],
+  "headlinesDetailed": [
+    {
+      "title": "🚨 .NET SOAPwn Flaw Opens Door for File Writes and Remote Code Execution via Rogue WSDL",
+      "source": "TheHackerNews",
+      "url": "https://thehackernews.com/2025/12/net-soapwn-flaw-opens-door-for-file.html"
+    },
+    {
+      "title": "🚨 Three PCIe Encryption Weaknesses Expose PCIe 5.0+ Systems to Faulty Data Handling",
+      "source": "TheHackerNews",
+      "url": "https://thehackernews.com/2025/12/three-pcie-encryption-weaknesses-expose.html"
+    },
+    {
+      "title": "🚨 Webinar: How Attackers Exploit Cloud Misconfigurations Across AWS, AI Models, and Kubernetes",
+      "source": "TheHackerNews",
+      "url": "https://thehackernews.com/2025/12/webinar-how-attackers-exploit-cloud.html"
+    },
+    {
+      "title": "🚨 Warning: WinRAR Vulnerability CVE-2025-6218 Under Active Attack by Multiple Threat Groups",
+      "source": "TheHackerNews",
+      "url": "https://thehackernews.com/2025/12/warning-winrar-vulnerability-cve-2025.html"
+    },
+    {
+      "title": "🚨 Microsoft Issues Security Fixes for 56 Flaws, Including Active Exploit and Two Zero-Days",
+      "source": "TheHackerNews",
+      "url": "https://thehackernews.com/2025/12/microsoft-issues-security-fixes-for-56.html"
+    }
+  ],
   "logs": [
     {
+      "type": "error",
+      "message": "New HIGH vulnerability: CVE-1999-0095",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "NVD"
+    },
+    {
+      "type": "error",
+      "message": "New HIGH vulnerability: CVE-1999-0082",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "NVD"
+    },
+    {
+      "type": "error",
+      "message": "New HIGH vulnerability: CVE-1999-1471",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "NVD"
+    },
+    {
       "type": "warn",
-      "message": "Suspicious traffic detected from 25.178.120.248",
-      "timestamp": "2025-12-10T20:14:27.161403+00:00"
+      "message": "New MEDIUM vulnerability: CVE-1999-1122",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "NVD"
+    },
+    {
+      "type": "error",
+      "message": "New HIGH vulnerability: CVE-1999-1467",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "NVD"
     },
     {
       "type": "warn",
-      "message": "Suspicious traffic detected from 184.43.227.41",
-      "timestamp": "2025-12-10T20:14:27.161478+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Suspicious traffic detected from 232.41.158.17",
-      "timestamp": "2025-12-10T20:14:27.161531+00:00"
+      "message": "URLhaus: 29475 active malware URLs detected",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "URLhaus"
     },
     {
       "type": "error",
-      "message": "Malware signature match - 0x43EA5",
-      "timestamp": "2025-12-10T20:14:27.161580+00:00"
+      "message": "FeodoTracker: 1 botnet C2 IPs blocked",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "FeodoTracker"
     },
     {
       "type": "error",
-      "message": "Malware signature match - 0xC3801",
-      "timestamp": "2025-12-10T20:14:27.161630+00:00"
+      "message": "Ransomware: lorenz claimed victim: Windemuller",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "RansomWatch"
     },
     {
       "type": "error",
-      "message": "Malware signature match - 0x430D7",
-      "timestamp": "2025-12-10T20:14:27.161678+00:00"
-    },
-    {
-      "type": "info",
-      "message": "Scanning port 8080 - Open",
-      "timestamp": "2025-12-10T20:14:27.161727+00:00"
-    },
-    {
-      "type": "info",
-      "message": "API heartbeat - NVD responding",
-      "timestamp": "2025-12-10T20:14:27.161775+00:00"
+      "message": "Ransomware: ragnarlocker claimed victim: Leaks Company Birch Communications inc.",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "RansomWatch"
     },
     {
       "type": "error",
-      "message": "Malware signature match - 0x5CA4D",
-      "timestamp": "2025-12-10T20:14:27.161823+00:00"
+      "message": "Ransomware: ragnarlocker claimed victim: Brunner Announce – Hello World !",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "RansomWatch"
     },
     {
       "type": "success",
-      "message": "Threat signature updated - 54 new patterns",
-      "timestamp": "2025-12-10T20:14:27.161871+00:00"
-    },
-    {
-      "type": "info",
-      "message": "API heartbeat - NVD responding",
-      "timestamp": "2025-12-10T20:14:27.161917+00:00"
-    },
-    {
-      "type": "info",
-      "message": "API heartbeat - CISA responding",
-      "timestamp": "2025-12-10T20:14:27.161969+00:00"
-    },
-    {
-      "type": "error",
-      "message": "Failed login attempt - User: user_8414",
-      "timestamp": "2025-12-10T20:14:27.162017+00:00"
-    },
-    {
-      "type": "success",
-      "message": "Firewall rule applied - Block 175.128.161.189",
-      "timestamp": "2025-12-10T20:14:27.162064+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Rate limit approaching - 79%",
-      "timestamp": "2025-12-10T20:14:27.162111+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Anomaly detected in sector E5",
-      "timestamp": "2025-12-10T20:14:27.162158+00:00"
-    },
-    {
-      "type": "info",
-      "message": "API heartbeat - NVD responding",
-      "timestamp": "2025-12-10T20:14:27.162206+00:00"
-    },
-    {
-      "type": "warn",
-      "message": "Suspicious traffic detected from 253.32.119.66",
-      "timestamp": "2025-12-10T20:14:27.162253+00:00"
-    },
-    {
-      "type": "info",
-      "message": "Scanning port 8080 - Closed",
-      "timestamp": "2025-12-10T20:14:27.162304+00:00"
-    },
-    {
-      "type": "error",
-      "message": "Brute force attempt blocked - CN",
-      "timestamp": "2025-12-10T20:14:27.162352+00:00"
+      "message": "All threat feeds synchronized",
+      "timestamp": "2025-12-10T20:25:49.209110+00:00",
+      "source": "System"
     }
   ],
   "stats": {
-    "totalThreats": 77944,
-    "blockedAttacks": 46760,
-    "activeBotnets": 301,
-    "compromisedIPs": 2910603
+    "totalCVEs": 20,
+    "criticalCVEs": 0,
+    "activeMalwareURLs": 29475,
+    "botnetIPs": 1,
+    "ransomwareVictims": 500,
+    "activeRansomGroups": 9
   },
-  "chaosIndex": 36.5
+  "sources": [
+    {
+      "name": "NOAA",
+      "status": "active",
+      "type": "solar"
+    },
+    {
+      "name": "NVD",
+      "status": "active",
+      "type": "vulnerabilities"
+    },
+    {
+      "name": "URLhaus",
+      "status": "active",
+      "type": "malware"
+    },
+    {
+      "name": "FeodoTracker",
+      "status": "active",
+      "type": "botnet"
+    },
+    {
+      "name": "RansomWatch",
+      "status": "active",
+      "type": "ransomware"
+    },
+    {
+      "name": "CoinGecko",
+      "status": "active",
+      "type": "crypto"
+    },
+    {
+      "name": "RSS Feeds",
+      "status": "active",
+      "type": "news"
+    }
+  ]
 }
