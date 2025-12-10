@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Meter 2.0 - Global Cybersecurity Threat Monitor</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Chakra+Petch:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🌀</div>
+                <div class="logo-text">
+                    <h1>CHAOS METER 2.0</h1>
+                    <span>Global Threat Intelligence</span>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <a href="#" class="simulate-btn" id="simulateBtn">▶ RUN SIMULATE</a>
+                <a href="blog.html" class="blog-link">BLOG</a>
+                <!-- Language Selector -->
+                <select id="langSelect" class="lang-selector" onchange="translatePage(this.value)">
+                    <option value="">🌐 Language</option>
+                    <option value="en">English</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh-CN">中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ru">Русский</option>
+                    <option value="ko">한국어</option>
+                    <option value="ar">العربية</option>
+                    <option value="pt">Português</option>
+                    <option value="it">Italiano</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="sv">Svenska</option>
+                </select>
+                <!-- Hidden Google Translate container -->
+                <div id="google_translate_element" style="display:none;"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ticker - EXCLUDED FROM TRANSLATION -->
+    <div class="ticker notranslate">
+        <div class="ticker-content" id="ticker"></div>
+    </div>
+
+    <!-- Main -->
+    <div class="main-container">
+        <div class="left-content">
+            <!-- Tiles -->
+            <div class="tiles-panel">
+                <h2 class="panel-title">Chaos Factors</h2>
+                <div class="tiles-grid notranslate" id="tilesGrid"></div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-panel">
+                <div class="chaos-index-overlay">
+                    <div class="chaos-index-main">
+                        <div class="chaos-value notranslate" id="mainScore">73.4</div>
+                        <div class="chaos-meta">
+                            <span class="chaos-label" style="font-size: 10px;">CHAOS INDEX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <img class="world-map"
+                        src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg"
+                        alt="World Map">
+                    <svg class="attack-overlay" id="attackOverlay" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="#f85149" />
+                            </marker>
+                        </defs>
+                    </svg>
+                    <div class="attack-points" id="attackPoints"></div>
+                </div>
+                <!-- Bottom News Ticker - EXCLUDED FROM TRANSLATION -->
+                <div class="news-ticker-container notranslate">
+                    <div class="news-label">🚨 ALERT</div>
+                    <div class="news-content" id="newsTicker"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small Ads Sidebar -->
+        <aside class="right-sidebar">
+            <!-- System Log - EXCLUDED FROM TRANSLATION -->
+            <div class="system-log notranslate">
+                <div class="log-title">System Log</div>
+                <div class="log-entries" id="logEntries"></div>
+            </div>
+
+            <div class="ad-wrapper">
+                <div class="ad-excuse">Support free service</div>
+                <div class="ad-container ad-120x240">
+                    <span class="ad-placeholder">Ad</span>
+                </div>
+                <div class="ad-apology">Thank you 🙏</div>
+            </div>
+
+            <div class="ad-wrapper">
+                <div class="ad-excuse">Server costs</div>
+                <div class="ad-container ad-120x120">
+                    <span class="ad-placeholder">Ad</span>
+                </div>
+                <div class="ad-apology">Minimal ads</div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Simulation Modal -->
+    <div class="modal-overlay" id="simulateModal">
+        <div class="modal-content simulation-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">⚡ CHAOS SIMULATION</h2>
+                <div class="mode-indicator" id="modeIndicator">🔴 SIMULATION MODE ACTIVE</div>
+            </div>
+            <p class="modal-subtitle">Manually adjust factors...</p>
+
+            <div class="sliders-container" id="slidersContainer">
+                <!-- Sliders will be generated here -->
+            </div>
+
+            <div class="modal-actions">
+                <button class="exit-btn" id="exitSimBtn">EXIT SIMULATION</button>
+                <button class="apply-btn" id="applyBtn">APPLY CHANGES</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span>© 2024 Chaos Meter 2.0</span>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">API</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translatePage(lang) {
+            if (!lang) return;
+
+            // Set cookie for Google Translate
+            var domain = location.hostname;
+            document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+            document.cookie = "googtrans=/en/" + lang + "; path=/";
+
+            // Save to localStorage
+            localStorage.setItem('selectedLang', lang);
+
+            // Reload page to apply translation
+            location.reload();
+        }
+
+        // Restore selected language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            var savedLang = localStorage.getItem('selectedLang');
+            if (savedLang) {
+                var select = document.getElementById('langSelect');
+                if (select) select.value = savedLang;
+            }
+        });
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

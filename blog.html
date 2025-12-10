@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Meter - Blog</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog_styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-y: auto !important;
+            height: auto !important;
+        }
+
+        .blog-wrapper {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        .back-btn-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Chakra Petch', sans-serif;
+            font-weight: 700;
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            color: #fff;
+            transform: translateX(-5px);
+        }
+
+        .header-title {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .header-title span {
+            color: var(--neon-green);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <div class="blog-wrapper">
+        <div class="back-btn-container">
+            <a href="a.html" class="back-btn">← BACK TO CHAOS MAP</a>
+            <!-- Language Selector -->
+            <select id="langSelect" class="lang-selector" onchange="translatePage(this.value)">
+                <option value="">🌐 Language</option>
+                <option value="en">English</option>
+                <option value="tr">Türkçe</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="zh-CN">中文</option>
+                <option value="ja">日本語</option>
+                <option value="ru">Русский</option>
+                <option value="ko">한국어</option>
+                <option value="ar">العربية</option>
+                <option value="pt">Português</option>
+                <option value="it">Italiano</option>
+                <option value="hi">हिन्दी</option>
+                <option value="nl">Nederlands</option>
+                <option value="sv">Svenska</option>
+            </select>
+        </div>
+
+        <div class="header-title">CHAOS <span>LOGS</span></div>
+
+        <div class="blog-grid" id="blogGrid"></div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <!-- Hidden Google Translate container -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translatePage(lang) {
+            if (!lang) return;
+            var domain = location.hostname;
+            document.cookie = "googtrans=/en/" + lang + "; path=/; domain=" + domain;
+            document.cookie = "googtrans=/en/" + lang + "; path=/";
+            localStorage.setItem('selectedLang', lang);
+            location.reload();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var savedLang = localStorage.getItem('selectedLang');
+            if (savedLang) {
+                var select = document.getElementById('langSelect');
+                if (select) select.value = savedLang;
+            }
+        });
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="blog_data.js"></script>
+    <script>
+        const POSTS_PER_PAGE = 8;
+        let currentPage = 1;
+
+        const sortedPosts = [...blogPosts].sort((a, b) => b.id - a.id);
+        const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+
+        function renderPosts(page) {
+            const grid = document.getElementById('blogGrid');
+            const startIdx = (page - 1) * POSTS_PER_PAGE;
+            const endIdx = startIdx + POSTS_PER_PAGE;
+            const postsToShow = sortedPosts.slice(startIdx, endIdx);
+
+            grid.innerHTML = postsToShow.map(post => `
+                <div class="blog-card" onclick="location.href='read_blog.html?id=${post.id}'" style="cursor: pointer;">
+                    <img src="${post.image}" alt="${post.title}" class="blog-card-img">
+                    <div class="blog-card-content">
+                        <div class="blog-card-title">${post.title}</div>
+                        <div class="blog-card-summary">${post.summary}</div>
+                        <div class="blog-card-footer">
+                            <span>${post.date}</span>
+                            <span class="read-more-btn">READ FILE →</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            renderPagination(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderPagination(page) {
+            const pagination = document.getElementById('pagination');
+
+            if (totalPages <= 1) {
+                pagination.style.display = 'none';
+                return;
+            }
+
+            let html = `
+                <button class="page-btn" onclick="changePage(${page - 1})" ${page === 1 ? 'disabled' : ''}>← PREV</button>
+            `;
+
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= page - 1 && i <= page + 1)) {
+                    html += `<button class="page-btn ${i === page ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+                } else if (i === page - 2 || i === page + 2) {
+                    html += `<span class="page-info">...</span>`;
+                }
+            }
+
+            html += `
+                <button class="page-btn" onclick="changePage(${page + 1})" ${page === totalPages ? 'disabled' : ''}>NEXT →</button>
+            `;
+
+            pagination.innerHTML = html;
+        }
+
+        function changePage(page) {
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            renderPosts(page);
+        }
+
+        renderPosts(1);
+    </script>
+</body>
+
+</html>

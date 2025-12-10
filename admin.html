@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - New Post</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog_styles.css">
+    <style>
+        body {
+            margin: 0;
+            background: #0d1117;
+            color: #c9d1d9;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-y: auto;
+        }
+
+        .admin-wrapper {
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 24px;
+            color: var(--red);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+
+        .warning {
+            background: rgba(248, 81, 73, 0.1);
+            border: 1px solid var(--red);
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            font-size: 11px;
+        }
+
+        textarea {
+            min-height: 200px;
+        }
+
+        .hint {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <div class="admin-wrapper">
+        <h1>🔒 NEW POST</h1>
+
+        <div class="warning">
+            <strong>⚠️ INSTRUCTIONS:</strong> Fill the form and click "Generate". Copy the output and paste it into
+            <code>blog_data.js</code> file.
+        </div>
+
+        <form class="admin-form" id="adminForm">
+            <div class="form-group">
+                <label>Post ID</label>
+                <input type="number" id="postId" required placeholder="4">
+                <div class="hint">Must be unique. Check blog_data.js for existing IDs.</div>
+            </div>
+
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="postTitle" required placeholder="BREAKING: New Cyber Threat Detected">
+            </div>
+
+            <div class="form-group">
+                <label>Date (YYYY-MM-DD)</label>
+                <input type="date" id="postDate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Image URL</label>
+                <input type="url" id="postImage" required placeholder="https://images.unsplash.com/...">
+                <div class="hint">Use Unsplash or similar. Recommended size: 1200x800px</div>
+            </div>
+
+            <div class="form-group">
+                <label>Summary</label>
+                <textarea id="postSummary" required placeholder="Brief overview (2-3 sentences)..." rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Tags (comma separated)</label>
+                <input type="text" id="postTags" required placeholder="security, cyber, threat, analysis">
+            </div>
+
+            <div class="form-group">
+                <label>Content (HTML)</label>
+                <textarea id="postContent" required
+                    placeholder="<p>Full article content...</p>&#10;<br>&#10;<h3>Section Title</h3>&#10;<p>More content...</p>"></textarea>
+                <div class="hint">You can use HTML tags: &lt;p&gt;, &lt;br&gt;, &lt;h3&gt;, &lt;ul&gt;, &lt;li&gt;,
+                    &lt;strong&gt;</div>
+            </div>
+
+            <button type="submit" class="generate-btn">⚡ GENERATE CODE</button>
+        </form>
+
+        <div id="output" style="display: none;">
+            <h3
+                style="color: var(--neon-green); font-family: 'Chakra Petch', sans-serif; margin-top: 30px; font-size: 16px;">
+                ✅ Generated Code:
+            </h3>
+            <div class="code-output" id="codeOutput"></div>
+            <button onclick="copyCode()" class="generate-btn" style="background: var(--neon-blue); margin-top: 10px;">
+                📋 COPY TO CLIPBOARD
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('postDate').valueAsDate = new Date();
+
+        document.getElementById('adminForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const post = {
+                id: parseInt(document.getElementById('postId').value),
+                title: document.getElementById('postTitle').value,
+                date: document.getElementById('postDate').value,
+                image: document.getElementById('postImage').value,
+                summary: document.getElementById('postSummary').value,
+                tags: document.getElementById('postTags').value,
+                content: document.getElementById('postContent').value
+            };
+
+            const code = `    {
+        id: ${post.id},
+        title: "${post.title}",
+        date: "${post.date}",
+        image: "${post.image}",
+        summary: "${post.summary}",
+        tags: "${post.tags}",
+        content: \`
+            ${post.content}
+        \`
+    },`;
+
+            document.getElementById('codeOutput').textContent = code;
+            document.getElementById('output').style.display = 'block';
+            document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function copyCode() {
+            const code = document.getElementById('codeOutput').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('✅ Copied! Paste it into blog_data.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+{
+  "lastUpdated": "2025-12-10T19:50:01.421800+00:00",
+  "updateInterval": 300,
+  "chaosFactors": {
+    "defcon": {
+      "value": 3,
+      "max": 5,
+      "reverse": true
+    },
+    "solar": {
+      "value": 2.0,
+      "max": 9
+    },
+    "vix": {
+      "value": 32.9,
+      "max": 80
+    },
+    "ransom": {
+      "value": 836,
+      "max": 1000
+    },
+    "ddos": {
+      "value": 22704,
+      "max": 50000
+    },
+    "zeroday": {
+      "value": 10,
+      "max": 50
+    },
+    "botnet": {
+      "value": 3.1,
+      "max": 10
+    },
+    "phish": {
+      "value": 2271,
+      "max": 10000
+    },
+    "darkweb": {
+      "value": 426,
+      "max": 500
+    },
+    "crypto": {
+      "value": 9.7,
+      "max": 20
+    },
+    "social": {
+      "value": 1071,
+      "max": 2000
+    },
+    "supply": {
+      "value": 49,
+      "max": 100
+    },
+    "apt": {
+      "value": 41,
+      "max": 50
+    },
+    "iot": {
+      "value": 6.9,
+      "max": 10
+    },
+    "breach": {
+      "value": 121,
+      "max": 500
+    },
+    "malware": {
+      "value": 896,
+      "max": 5000
+    },
+    "insider": {
+      "value": 52,
+      "max": 100
+    },
+    "patch": {
+      "value": 20,
+      "max": 90
+    },
+    "cloud": {
+      "value": 78,
+      "max": 100
+    },
+    "ai": {
+      "value": 205,
+      "max": 500
+    }
+  },
+  "attacks": [
+    {
+      "from": "VN",
+      "to": "FR",
+      "type": "Exploit",
+      "intensity": 8
+    },
+    {
+      "from": "UA",
+      "to": "AU",
+      "type": "Exploit",
+      "intensity": 6
+    },
+    {
+      "from": "KP",
+      "to": "JP",
+      "type": "Exploit",
+      "intensity": 6
+    },
+    {
+      "from": "IN",
+      "to": "KR",
+      "type": "Brute Force",
+      "intensity": 5
+    },
+    {
+      "from": "VN",
+      "to": "SG",
+      "type": "Ransomware",
+      "intensity": 7
+    },
+    {
+      "from": "CN",
+      "to": "FR",
+      "type": "Phishing",
+      "intensity": 7
+    },
+    {
+      "from": "BR",
+      "to": "NL",
+      "type": "DDoS",
+      "intensity": 8
+    },
+    {
+      "from": "BR",
+      "to": "CA",
+      "type": "Ransomware",
+      "intensity": 4
+    },
+    {
+      "from": "UA",
+      "to": "AU",
+      "type": "DDoS",
+      "intensity": 1
+    },
+    {
+      "from": "UA",
+      "to": "NL",
+      "type": "SQLi",
+      "intensity": 2
+    },
+    {
+      "from": "TR",
+      "to": "GB",
+      "type": "DDoS",
+      "intensity": 7
+    },
+    {
+      "from": "UA",
+      "to": "CA",
+      "type": "Exploit",
+      "intensity": 4
+    },
+    {
+      "from": "IN",
+      "to": "US",
+      "type": "Ransomware",
+      "intensity": 7
+    },
+    {
+      "from": "UA",
+      "to": "FR",
+      "type": "Ransomware",
+      "intensity": 4
+    },
+    {
+      "from": "US",
+      "to": "KR",
+      "type": "Phishing",
+      "intensity": 1
+    },
+    {
+      "from": "UA",
+      "to": "SG",
+      "type": "Brute Force",
+      "intensity": 3
+    },
+    {
+      "from": "IR",
+      "to": "NL",
+      "type": "Brute Force",
+      "intensity": 3
+    },
+    {
+      "from": "UA",
+      "to": "CA",
+      "type": "Botnet",
+      "intensity": 3
+    },
+    {
+      "from": "US",
+      "to": "AU",
+      "type": "Phishing",
+      "intensity": 3
+    },
+    {
+      "from": "RU",
+      "to": "NL",
+      "type": "Brute Force",
+      "intensity": 2
+    },
+    {
+      "from": "IN",
+      "to": "KR",
+      "type": "Brute Force",
+      "intensity": 9
+    },
+    {
+      "from": "CN",
+      "to": "US",
+      "type": "Exploit",
+      "intensity": 4
+    },
+    {
+      "from": "CN",
+      "to": "GB",
+      "type": "Exploit",
+      "intensity": 4
+    },
+    {
+      "from": "US",
+      "to": "CA",
+      "type": "Brute Force",
+      "intensity": 6
+    },
+    {
+      "from": "VN",
+      "to": "JP",
+      "type": "DDoS",
+      "intensity": 8
+    }
+  ],
+  "headlines": [
+    "🚨 .NET SOAPwn Flaw Opens Door for File Writes and Remote Code Execution via Rogue WSDL",
+    "🚨 Three PCIe Encryption Weaknesses Expose PCIe 5.0+ Systems to Faulty Data Handling",
+    "🚨 Webinar: How Attackers Exploit Cloud Misconfigurations Across AWS, AI Models, and Kubernetes",
+    "🚨 Warning: WinRAR Vulnerability CVE-2025-6218 Under Active Attack by Multiple Threat Groups",
+    "🚨 Microsoft Issues Security Fixes for 56 Flaws, Including Active Exploit and Two Zero-Days"
+  ],
+  "logs": [
+    {
+      "type": "warn",
+      "message": "Suspicious traffic detected from 24.73.240.158",
+      "timestamp": "2025-12-10T19:50:06.611233+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Anomaly detected in sector E5",
+      "timestamp": "2025-12-10T19:50:06.611414+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Failed login attempt - User: user_1814",
+      "timestamp": "2025-12-10T19:50:06.611467+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Brute force attempt blocked - BR",
+      "timestamp": "2025-12-10T19:50:06.611516+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Suspicious traffic detected from 177.231.110.179",
+      "timestamp": "2025-12-10T19:50:06.611575+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Malware signature match - 0x1A2C6",
+      "timestamp": "2025-12-10T19:50:06.611625+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Suspicious traffic detected from 173.114.139.209",
+      "timestamp": "2025-12-10T19:50:06.611672+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Rate limit approaching - 90%",
+      "timestamp": "2025-12-10T19:50:06.611781+00:00"
+    },
+    {
+      "type": "error",
+      "message": "Brute force attempt blocked - IR",
+      "timestamp": "2025-12-10T19:50:06.611840+00:00"
+    },
+    {
+      "type": "info",
+      "message": "API heartbeat - NOAA responding",
+      "timestamp": "2025-12-10T19:50:06.611892+00:00"
+    },
+    {
+      "type": "info",
+      "message": "Scanning port 8080 - Filtered",
+      "timestamp": "2025-12-10T19:50:06.611940+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Anomaly detected in sector D4",
+      "timestamp": "2025-12-10T19:50:06.611987+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Anomaly detected in sector E5",
+      "timestamp": "2025-12-10T19:50:06.612035+00:00"
+    },
+    {
+      "type": "success",
+      "message": "Threat signature updated - 202 new patterns",
+      "timestamp": "2025-12-10T19:50:06.612080+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Suspicious traffic detected from 20.168.146.86",
+      "timestamp": "2025-12-10T19:50:06.612187+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Anomaly detected in sector D4",
+      "timestamp": "2025-12-10T19:50:06.612240+00:00"
+    },
+    {
+      "type": "warn",
+      "message": "Anomaly detected in sector C3",
+      "timestamp": "2025-12-10T19:50:06.612283+00:00"
+    },
+    {
+      "type": "success",
+      "message": "Threat signature updated - 445 new patterns",
+      "timestamp": "2025-12-10T19:50:06.612413+00:00"
+    },
+    {
+      "type": "success",
+      "message": "Firewall rule applied - Block 57.188.186.24",
+      "timestamp": "2025-12-10T19:50:06.612505+00:00"
+    },
+    {
+      "type": "info",
+      "message": "API heartbeat - NVD responding",
+      "timestamp": "2025-12-10T19:50:06.612600+00:00"
+    }
+  ],
+  "stats": {
+    "totalThreats": 101669,
+    "blockedAttacks": 25979,
+    "activeBotnets": 248,
+    "compromisedIPs": 3376051
+  },
+  "chaosIndex": 44.7
+}
